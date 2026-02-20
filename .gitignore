@@ -1,0 +1,8 @@
+.env/
+__pycache__/
+.git/
+.obsidian/
+.trae/
+out/
+nuitka-crash-report.xml
+*.pyc

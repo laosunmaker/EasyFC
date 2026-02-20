@@ -1,0 +1,74 @@
+[
+    {
+        "name": "下划线分隔-提取中间",
+        "description": "从文件名中提取第一个和第二个下划线之间的内容",
+        "delimiter_start": "_",
+        "delimiter_end": "_",
+        "start_pos": 1,
+        "end_pos": 2,
+        "preview_example": "img_2026年2月1日_54864848.png"
+    },
+    {
+        "name": "下划线分隔-提取末尾",
+        "description": "从文件名中提取第一个下划线后的所有内容",
+        "delimiter_start": "_",
+        "delimiter_end": "_",
+        "start_pos": 1,
+        "end_pos": -1,
+        "preview_example": "img_2026年2月1日_54864848.png"
+    },
+    {
+        "name": "下划线分隔-提取开头",
+        "description": "从文件名中提取第一个下划线前的所有内容",
+        "delimiter_start": "_",
+        "delimiter_end": "_",
+        "start_pos": -1,
+        "end_pos": 1,
+        "preview_example": "img_2026年2月1日_54864848.png"
+    },
+    {
+        "name": "中划线分隔-提取中间",
+        "description": "从文件名中提取第一个和第二个中划线之间的内容",
+        "delimiter_start": "-",
+        "delimiter_end": "-",
+        "start_pos": 1,
+        "end_pos": 2,
+        "preview_example": "photo-2026-02-01-001.jpg"
+    },
+    {
+        "name": "中括号提取",
+        "description": "提取中括号内的内容",
+        "delimiter_start": "[",
+        "delimiter_end": "]",
+        "start_pos": 1,
+        "end_pos": 1,
+        "preview_example": "document[重要]_v1.pdf"
+    },
+    {
+        "name": "小括号提取",
+        "description": "提取小括号内的内容",
+        "delimiter_start": "(",
+        "delimiter_end": ")",
+        "start_pos": 1,
+        "end_pos": 1,
+        "preview_example": "report(2026年度).xlsx"
+    },
+    {
+        "name": "井号分隔",
+        "description": "提取井号分隔的内容",
+        "delimiter_start": "#",
+        "delimiter_end": "#",
+        "start_pos": 1,
+        "end_pos": 2,
+        "preview_example": "file#category#2026#data.txt"
+    },
+    {
+        "name": "空格分隔-提取第一段",
+        "description": "提取第一个空格后的内容到第二个空格前",
+        "delimiter_start": " ",
+        "delimiter_end": " ",
+        "start_pos": 1,
+        "end_pos": 2,
+        "preview_example": "IMG 2026 02 01 photo.jpg"
+    }
+]

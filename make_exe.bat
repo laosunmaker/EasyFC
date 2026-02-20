@@ -27,16 +27,16 @@ if %errorlevel% neq 0 (
 echo 步骤2:复制资源文件...
 if not exist "%OUTPUT_DIR%" mkdir "%OUTPUT_DIR%"
 echo 复制图标文件...
-xcopy /Y /Q "%SCRIPT_DIR%file.ico" "%OUTPUT_DIR%\" >nul
+copy /Y "%SCRIPT_DIR%file.ico" "%OUTPUT_DIR%\" >nul
 echo 创建样式文件夹...
 if not exist "%OUTPUT_DIR%\styles" mkdir "%OUTPUT_DIR%\styles"
 echo 复制样式文件...
-xcopy /Y /Q "%SCRIPT_DIR%/styles/file_classifier.qss" "%OUTPUT_DIR%/styles/file_classifier.qss" >nul
+copy /Y "%SCRIPT_DIR%styles\file_classifier.qss" "%OUTPUT_DIR%\styles\" >nul
 echo 创建配置文件夹...
 if not exist "%OUTPUT_DIR%\config" mkdir "%OUTPUT_DIR%\config"
 echo 复制配置文件...
-xcopy /Y /Q "%SCRIPT_DIR%/config/extension_configs.json" "%OUTPUT_DIR%/config/extension_configs.json" >nul
-xcopy /Y /Q "%SCRIPT_DIR%/config/extension_configs.json" "%OUTPUT_DIR%/config/extension_configs.json" >nul
+copy /Y "%SCRIPT_DIR%config\delimiter_configs.json" "%OUTPUT_DIR%\config\" >nul
+copy /Y "%SCRIPT_DIR%config\extension_configs.json" "%OUTPUT_DIR%\config\" >nul
 echo 复制完成！
 
 if exist "%OUTPUT_DIR%\EasyFC.exe" (

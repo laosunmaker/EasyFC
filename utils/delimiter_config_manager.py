@@ -6,6 +6,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Optional
 
+from .path_utils import get_config_path
+
 
 @dataclass
 class DelimiterConfig:
@@ -81,12 +83,12 @@ class DelimiterConfigManager:
         初始化配置管理器
         
         Args:
-            config_dir: 配置文件目录，默认为 src/app/config
+            config_dir: 配置文件目录，默认为应用根目录下的 config
         """
         if config_dir:
             self.config_dir = Path(config_dir)
         else:
-            self.config_dir = Path(__file__).parent.parent / "config"
+            self.config_dir = get_config_path()
 
         self._configs: List[DelimiterConfig] = []
         self._load_error: Optional[str] = None

@@ -7,7 +7,7 @@
 **一款简洁高效的桌面文件分类管理工具**
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
-[![PySide6](https://img.shields.io/badge/PySide6-6.10.2-green.svg)](https://pypi.org/project/PySide6/)
+[![PySide6](https://img.shields.io/badge/PySide6-6.8.2.1-green.svg)](https://pypi.org/project/PySide6/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
 
@@ -111,7 +111,7 @@ document[重要]_v1.pdf          → 重要/
 | 技术 | 版本 | 用途 |
 |------|------|------|
 | Python | 3.10+ | 开发语言 |
-| PySide6 | 6.10.2 | GUI 框架 |
+| PySide6 | 6.8.2.1 | GUI 框架 |
 | Nuitka | 4.0.1 | 打包工具 |
 | pydantic | 2.12.5 | 数据验证 |
 
@@ -159,6 +159,7 @@ document[重要]_v1.pdf          → 重要/
 │  ┌─────────────────────────────────────────────────────┐    │
 │  │                    Utils (工具层)                    │    │
 │  │  • file_utils (文件操作工具)                          │    │
+│  │  • path_utils (路径处理工具)                          │    │
 │  │  • extension_config_manager (扩展名配置管理)          │    │
 │  │  • delimiter_config_manager (分隔符配置管理)          │    │
 │  └─────────────────────────────────────────────────────┘    │
@@ -207,6 +208,7 @@ EasyFc/
 ├── utils/                           # 工具类
 │   ├── __init__.py
 │   ├── file_utils.py                # 文件操作工具
+│   ├── path_utils.py                # 路径处理工具
 │   ├── extension_config_manager.py  # 扩展名配置管理
 │   └── delimiter_config_manager.py  # 分隔符配置管理
 │
@@ -268,7 +270,7 @@ python main.py
 
 | 依赖包 | 版本 | 用途 |
 |--------|------|------|
-| PySide6 | 6.10.2 | Qt GUI 框架 |
+| PySide6 | 6.8.2.1 | Qt GUI 框架 |
 | pydantic | 2.12.5 | 数据验证 |
 | Nuitka | 4.0.1 | Python 打包工具 |
 

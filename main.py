@@ -2,19 +2,17 @@ import sys
 
 from pathlib import Path
 
-
-
 from PySide6.QtWidgets import QApplication
 from PySide6.QtCore import QFile, QTextStream
 from PySide6.QtGui import QIcon
-
 from views import FileClassifierWindow
 from viewmodels import FileClassifierViewModel
+from utils.path_utils import get_base_path, get_styles_path
 
 
 def load_stylesheet() -> str:
     """加载样式表"""
-    style_path = Path(__file__).parent / "styles" / "file_classifier.qss"
+    style_path = get_styles_path() / "file_classifier.qss"
     if style_path.exists():
         with open(style_path, "r", encoding="utf-8") as f:
             return f.read()
@@ -23,7 +21,7 @@ def load_stylesheet() -> str:
 
 def load_icon() -> QIcon:
     """加载图标"""
-    icon_path = Path(__file__).parent / "file.ico"
+    icon_path = get_base_path() / "file.ico"
     if icon_path.exists():
         return QIcon(str(icon_path))
     return QIcon()
